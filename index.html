@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>LV JS Meetup - Google Apps Script!</title>
+	<!-- this presentation is based on https://github.com/hakimel/reveal.js/ -->
+	<!-- this file is based on index.html from that package...-->
+
+	<!-- Reminder: Chrome Toggle Full Screen Mode:        Function + F11 (Linux)      Just F11 (Windows)-->
+
+	<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+	<meta name="author" content="LB Corney, zipzit@yahoo.com">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<!-- <link rel="stylesheet" href="css/theme/black.css" id="theme"> -->
+	<!--  <link rel="stylesheet" href="css/theme/league.css" id="theme"> -->   <!-- cool gray with nice fonts theme -->
+	<!--  <link rel="stylesheet" href="css/theme/moon.css" id="theme"> --> <!-- funky blue green color -->
+	<!-- <link rel="stylesheet" href="css/theme/night.css" id="theme"> --> <!-- coffee colored theme -->
+	<!-- <link rel="stylesheet" href="css/theme/serif.css" id="theme"> -->  <!-- Roman Fonts on White -->
+	<!-- <link rel="stylesheet" href="css/theme/simple.css" id="theme"> --> <!-- very simple font on white -->
+	 <link rel="stylesheet" href="css/theme/sky.css" id="theme">   <!-- very light blue background -->
+	<!-- <link rel="stylesheet" href="css/theme/solarized.css" id="theme"> --> <!-- manilla folder color background -->
+	<!-- <link rel="stylesheet" href="css/theme/white.css" id="theme"> --> <!-- simple white with blue highlights -->
+
+
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- Printing and PDF exports -->
+	<script>
+		var link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.type = 'text/css';
+		link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+		document.getElementsByTagName('head')[0].appendChild(link);
+	</script>
+
+	<!--[if lt IE 9]>
+		<script src="js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<h1>Google Apps Script</h1>
+				<h3>What the heck is it?</h3>
+				<p style="text-align: center">
+					<small>Presented by <a href="http://dogfeatherdesign.com">LB Corney</a> / <a href="http://twitter.com/lbcorney">@lb_corney</a></small>
+					<br/>
+				</p>
+				<aside class="notes">
+					1) Open the speaker notes window (Hit 's' on your keyboard). 2) Chrome Toggle Full Screen Mode: (Function + F11) 3) Toggle overview mode: (Esc)
+				</aside>
+			</section>
+
+			<section>
+				<h2>Google Products</h2>
+				<ul>
+					<h4>Google has provided some pretty awesome tools:</h4>
+					<li>Google Calendar, Gmail, Contacts. </li>
+					<li>Google Drive with Sheets (spreadsheets), Docs (word processing). </li>
+					<li>Google Slides (PowerPoint?)</li>
+					<li>Google Drawings (best tool ever for app prototyping!)</li>
+					<li>Picassa images, Charts, etc.... </li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>What is Google Apps Script?</h2>
+				<h4>Google Apps Script is a JavaScript cloud scripting language that provides easy ways to automate tasks across Google products and third party services and build web applications.</h4>
+			</section>
+
+			<section>
+				<h2>Huh? What did that previous slide even mean?</h2>
+				<ul>
+					<li>Do cool stuff with Google Products.</li>
+					<li>Written in JavaScript.</li>
+					<li>Avoids security login hassles.</li>
+					<li>Enhance things by making them more useful.</li>
+					<li>Pretty easy to use and test. (Logger.log and debug)</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>So what can a Google Apps Script do?</h2>
+				<ul>
+					<li>Add custom menus, dialogs, and sidebars to Google Docs, Sheets, and Forms</li>
+					<li>Write custom functions for Google Sheets</li>
+					<li>Apps Script includes special APIs to let you programmatically create, read, and edit Google Apps files. </li>
+					<li>Build an add-on for Google Sheets, Docs, or Forms, and publish that add-on in the Google online store</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Advanced Services</h2>
+				<ul>
+					You can also access some advanced Google tools:
+					<li>Admin Directory, Admin Reports, Adsense</li>
+					<li>Google Analytics, Big Query, Calendar</li>
+					<li>Drive, Fusion Table, Gmail, </li>
+					<li>Google Mirror, Google +, Prediction API</li>
+					<li>Tasks API, URL shortener, and Youtube</li>
+					<!-- &lt; (<) -->
+					<!-- &gt; (>) -->
+					<!-- &amp; (&) -->
+				</ul>
+			</section>
+
+			<section>
+				<h2>Yawn</h2>
+				<img src="lbc_support_files/yawningKitten.jpg" />
+			</section>
+
+			<section>
+				<h2>Blah, Blah, Blah.  Show us something already.</h2>
+				<ul>
+					<li>Get JSON data from Google Sheet (GetFresh, Flashcards, LV Options)</li>
+					<li>Form to submit data (LV Options)</li>
+					<li>API calls, Get quote, update webpage (LV Options)</li>
+					<li>Logger, debug (LV Options)</li>
+					<li>Create elements on Google Drive, send emails (Timekeeper & Conference Form example)</li>
+					<li>Chron calls, send emails and text pages (Website Monitor Tool)</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>TimeKeeper = https://github.com/jraklovits/timeKeeper</li>
+						<li>Conference form example = https://developers.google.com/apps-script/quickstart/forms</li>
+						<li>website monitor tool = http://www.labnol.org/internet/website-uptime-monitor/21060/ </li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h2>Get JSON data from Google Sheet</h2>
+				<p> Discuss the use case for <a href="http://www.getfreshsales.com/all-products-list/"> GetFresh</a>.</p>
+				<p> Discuss the use case for <a href="http://dogfeatherdesign.com/Extras/flashcards.html"> Exercise flashcards</a>. </p>
+				<p> try: <a href="http://goo.gl/0L31L0">goo.gl/0L31L0</a> on your mobile phone's browser </p>
+				<p> Demo: Show code details using <a href="http://dogfeatherdesign.com/lvoptions">LV Options Meetup Tool</a>.</p>
+			</section>
+
+			<section>
+				<p>JSON data from Google Sheet: The code is as simple as putting
+					<a href="https://spreadsheets.google.com/feeds/list/1EnfiL4ya3ujUcCyy1H-SlvoTK6G06qfw7aIVMvrS-3c/od6/public/full?alt=json-in-script">
+						this</a> in the body of your html file.
+				</p>
+				<pre>
+					<code class="hljs hljs javascript hljs " data-trim="" contenteditable="">
+<script src="https://spreadsheets.google.com/feeds/list/XXXXXXXX/od6/public/full?alt=json-in-script&amp;callback=useJSONdata"></script>
+					</code>
+				</pre>
+				<p>In the script portion of your site you would have:</p>
+				<pre style="margin: 0 auto">
+					<code class="hljs hljs javascript hljs " data-trim="" contenteditable="">
+function useJSONdata(root) {
+    console.log(JSON.stringify(root, null, 4));
+    // Understanding the object root is a great
+    // way to understand what is going on with JSON
+    var entries = root.feed.entry || [];  .. etc.
+					</code>
+				</pre>
+				<p>Analyse the data you need, run a for loop, create a string of content to be pasted back into the Document Object Model / HTML / body.</p>
+			</section>
+
+			<section>
+				<h2>Comments on Scripts</h2>
+				<p>The previous examples obtained data from Google sheets. Those weren't really Google Apps Script, per se, but a different way about thinking on the interface. Google Apps Script is really JavaScript code that runs on the Google servers.</p>
+				<ul>There are three types of scripts:
+					<li>Bound to Google Apps</li>
+					<li>Web Apps</li>
+					<li>Standalone (e.g. a utility script to manage your Google Drive content)</li>
+				</ul>
+				<aside class="notes">
+					<ul>
+						<li>TimeKeeper = https://github.com/jraklovits/timeKeeper</li>
+						<li>Conference form example = https://developers.google.com/apps-script/quickstart/forms</li>
+						<li>website monitor tool = http://www.labnol.org/internet/website-uptime-monitor/21060/ </li>
+					</ul>
+				</aside>
+			</section>
+
+			<section>
+				<h2>Use Google Apps Script to call other API</h2>
+				<ul>
+					<li>Demo: LV options example. </li>
+					<li>This is a "bound to Google Apps" script. </li>
+					<li>Once a day go to Yahoo's API and get the current stock price.</li>
+					<li>Update the data within the Google Table on Google Drive.</li>
+					<li> Show Triggers work, including Chron and OnFormSubmit(event).</li>
+				</ul>
+			</section>
+			<section>
+				<section>
+					<h2>Use Google Apps Scripts to create new Drive content</h2>
+					<ul>
+						<li>Demo: TimeKeeper from Github example. </li>
+						<li>This is a "Web App" script.</li>
+					</ul>
+				</section>
+				<section>
+					<h2>All roads start at Google.com</h2>
+					<img src="lbc_support_files/Google-kitten.jpg" />
+				</section>
+				<section>
+					<ol>
+						To run TimeKeeper:
+						<li>Open up your browser to google.com.</li>
+						<li>Ensure you are logged in to Google. (check upper right hand corner of the page.)</li>
+						<li>Click on the 3x3 box icon, then select Google Drive.</li>
+						<li>Select New --> More --> Google Apps Script.</li>
+						<li>Copy the contents of code.gs file from this repository to your script.</li>
+					</ol>
+				</section>
+				<section>
+					<ol start="6">
+						<li>In the script editor tool, choose File --> New --> HTML file. This will create a new tab in your editor.</li>
+						<li>Copy the contents of index.html from this repository to your new html file.</li>
+						<li>Save all files, give your project a name.</li>
+						<li>"Once that basic framework is in place, all you have to do is save a version of your script, then deploy your script as a web app." See instructions at https://developers.google.com/apps-script/guides/html/</li>
+					</ol>
+				</section>
+			</section>
+			<section>
+				<h2>Use Google Apps Scripts to create new Drive content, email</h2>
+				<ul>
+					<li>Demo: Conference Form. </li>
+					<li>This is a "Bound to Google Apps" script.</li>
+					<li>From spreadsheet, create form, create calendar entry, send out email.</li>
+				</ul>
+			</section>
+			<section>
+				<h2>Just one more exciting example</h2>
+				<img src="lbc_support_files/Catcomputer.jpg" />
+			</section>
+			<section>
+				<h2>Use Google Apps Scipts to send emails, SMS </h2>
+				<ul>
+					<li> Demo: Website Uptime Monitor. </li>
+					<li>This is a "Bound to Google Apps" script. </li>
+					<li> Check website every five minutes. Send email and SMS if site is down.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Lessons Learned, Tidbits of JS</h2>
+				<ul>
+					<li>How exactly does JSONP work.</li>
+					<li>There are some pretty interesting Google tools available.</li>
+					<li>There is a lot of crap on Github.</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>References used:</h2>
+				<ul>
+					<li><a href=" http://www.nextofwindows.com/how-to-use-google-doc-spreadsheet-serve-json-from-excel-spreadsheet/">JSON data from Google sheets</a> </li>
+					<li><a href="http://dogfeatherdesign.com/lvoptions">LV Advanced Options and Hedging Meetup </a> </li>
+					<li><a href="http://dogfeatherdesign.com/electronic-3x5-cards/">Blog posting on flashcards </a> </li>
+					<li><a href="http://dogfeatherdesign.com/Extras/flashcards.html">AFAA Flashcard (Best on Mobile Phone!) </a> </li>
+					<li><a href="https://github.com/jraklovits/timeKeeper">TimeKeeper</a> </li>
+					<li><a href="https://developers.google.com/apps-script/quickstart/forms">Conference form example</a></li>
+					<li><a href="http://www.labnol.org/internet/website-uptime-monitor/21060/">Website Monitor Tool </a> </li>
+				</ul>
+			</section>
+
+			<section style="text-align: center;">
+				<h2>Questions, Comments?</h2>
+				<img src="lbc_support_files/cat-the-end.jpg" />
+				<p><a href="https://github.com/hakimel/reveal.js">Reveal.JS presenter tool &amp; documentation</a></p>
+			</section>
+
+		</div>
+
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+
+			transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+			// Optional reveal.js plugins
+			dependencies: [{
+				src: 'js/classList.js',
+				condition: function() {
+					return !document.body.classList;
+				}
+			}, {
+				src: 'plugin/markdown/marked.js',
+				condition: function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src: 'plugin/markdown/markdown.js',
+				condition: function() {
+					return !!document.querySelector('[data-markdown]');
+				}
+			}, {
+				src: 'plugin/highlight/highlight.js',
+				async: true,
+				condition: function() {
+					return !!document.querySelector('pre code');
+				},
+				callback: function() {
+					hljs.initHighlightingOnLoad();
+				}
+			}, {
+				src: 'plugin/zoom-js/zoom.js',
+				async: true
+			}, {
+				src: 'plugin/notes/notes.js',
+				async: true
+			}]
+		});
+	</script>
+
+</body>
+
+</html>

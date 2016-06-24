@@ -6,7 +6,7 @@ Here's a basic introduction to Google Apps Scripts.
 
 - What is it?
 - How does it work?
-- Why is this awesome? What can you do with this stuff.
+- Why is this awesome? What can you do with this stuff?
 
 Demos:
 
@@ -15,6 +15,6 @@ Demos:
 - Running API calls within a Google Apps Script to a non Google site
 - Using Scripts to generate sheets, docs, calendar entries and emails.
 
-Link to slide show.
+[Link](https://rawgit.com/zipzit/JS_GoogAppsScript_Presentation/master/index.html#/)) to slide show.
 
 LB Corney

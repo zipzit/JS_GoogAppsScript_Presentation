@@ -17,4 +17,6 @@ Demos:
 
 [Link](https://rawgit.com/zipzit/JS_GoogAppsScript_Presentation/master/index.html#/) to slide show.
 
+Presentation created with [Reveal.js, with many thanks to Hakim El Hattab](https://github.com/hakimel/reveal.js)
+
 LB Corney

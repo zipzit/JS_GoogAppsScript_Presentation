@@ -15,6 +15,6 @@ Demos:
 - Running API calls within a Google Apps Script to a non Google site
 - Using Scripts to generate sheets, docs, calendar entries and emails.
 
-[Link](https://rawgit.com/zipzit/JS_GoogAppsScript_Presentation/master/index.html#/)) to slide show.
+[Link](https://rawgit.com/zipzit/JS_GoogAppsScript_Presentation/master/index.html#/) to slide show.
 
 LB Corney
